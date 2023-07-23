@@ -98,11 +98,11 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">Principal’s Welcome</a>
+              <a href="#">Lorem</a>
               <hr className='line_megamenu'/>
-              <a href="#">About Us</a>
+              <a href="#">Lorem</a>
               <hr className='line_megamenu'/>
-              <a href="#">Why choose Us</a>
+              <a href="#">Lorem</a>
               <hr className='line_megamenu'/>
             </div>
             <div className="mega-menu-right">
