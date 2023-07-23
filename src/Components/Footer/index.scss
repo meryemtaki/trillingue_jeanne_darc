@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+// mixin max
+@mixin res_max($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+$screen-sm-max : 600px;
+$screen-md-max: 768px;
+$screen-lg-max: 992px;
+$screen-xl-max: 1200px;
+$screen-xxl-max: 2000px;
+// @include res_max($screen--min) {
+// }
+
+// mixin min
+@mixin res_min($screen){
+    @media screen and (min-width: $screen){
+        @content;
+    }
+}
+$screen-xxl-large-min: 2000px;
+$screen-xxl-xlarge-min: 3000px;
+// @include res_min($screen--min) {
+// }
+
+.footer {
+    background-color: #063964;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        .footer_image{
+            width: 60%;
+            background: #fff;
+            text-align: center;
+            height: 30%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            @include res_max($screen-sm-max){
+                height: 100%;
+            }
+            img{
+                @include res_max($screen-lg-max) {
+                    width: 70%;
+                }
+            }
+        }
+        
+    }
+
+    .footer-elements {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        h6{
+            background-color: #f0c30f;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            padding: 7px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-family: 'Oswald', sans-serif;
+            color: rgb(246, 248, 249);
+            font-weight: bold;
+            line-height: 0.846;
+              
+            &.sitemap {
+                display: inline-block;
+            }
+            &.contact-datails {
+                display: inline-block;
+            }
+            &.contact-us {
+                display: inline-block;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: #f0c30f;
+            }
+        }
+        
+        p {
+            padding-left: 20px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.copy-right {
+    background-color: #f0c30f; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+    p {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 20px;
+        font-weight: 600;
+        color: #063964;
+    }
+}

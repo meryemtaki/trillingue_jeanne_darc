@@ -1,0 +1,815 @@
+
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/meow-script');
+@import url('https://fonts.cdnfonts.com/css/oswald-4');
+@import url('https://fonts.cdnfonts.com/css/lemonmilk'); 
+
+a{
+    text-decoration: none;
+}
+// mixin max
+@mixin res_max($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+$screen-sm-max : 600px;
+$screen-md-max: 768px;
+$screen-lg-max: 992px;
+$screen-xl-max: 1200px;
+$screen-xxl-max: 2000px;
+// @include res_max($screen--min) {
+// }
+
+// mixin min
+@mixin res_min($screen){
+    @media screen and (min-width: $screen){
+        @content;
+    }
+}
+$screen-xxl-large-min: 2000px;
+$screen-xxl-xlarge-min: 3000px;
+// @include res_min($screen--min) {
+// }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.Home{
+   
+    .headmaster {
+        .title_master{
+            text-align: center;
+            .welcome_title{
+                font-size: 50px;
+                font-family: "Poppins", sans-serif;
+                color: rgb(18, 53, 86);
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    font-size: 14px;
+                }
+                span{
+                    background-color: #f1c40f;
+                    color: #fff;
+                    padding: 0 5px;
+                }
+            }
+            .title-section{
+                    font-size: 33px;
+                    font-family: 'Meow Script', sans-serif;
+                    color: rgb(18, 53, 86);
+                    line-height: 1.2;
+                    text-align: center;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    width: 100%;
+                    font-size: 25px;
+                }
+            }
+            hr{
+                width: 5%;
+                height: 5px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgb(18, 53, 86);
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                opacity: 1;
+            }
+        }
+        
+
+        .image {
+            z-index: 1;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                text-align: center;
+            }
+            img {
+                height: 85%;
+                float: left;
+                top: 8%;
+                position: relative;
+                left: -10%;
+                box-shadow: 10px 10px #d5d5d5;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    float: none;
+                    left: 0;
+                }
+            }
+        }
+
+        .paragraph {
+            background-color: #073d6a;
+            color: white;
+            display: block;
+            padding: 50px 100px;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                display: block;
+                padding: 25px 15px;
+            }
+            h4{
+                text-transform: uppercase;
+                font-size: 26px;
+                font-family: "Oswald";
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                line-height: 75px;
+            }
+            p {
+                width: 93%;
+                .read_more{
+                    color:#f1c40f;
+                    font-weight: 600;
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover{
+                        color: #cc1423;
+                    }
+                }
+            }
+            .play{
+                color: white;
+                img{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .notre_charte{
+        background-image: url(../../assets/images/bg_notre_charte.png);
+        background-repeat: no-repeat;
+        height: 100%;
+        min-height: 750px;
+        background-size: 100%;
+        @include res_max($screen-sm-max){
+            background-size: 100% 100%;
+        }
+        .title_notre_charte{
+            .title-section{
+                font-size: 45px;
+                font-family: "Montserrat";
+                color: rgb(7, 61, 106);
+                font-weight: bold;
+                line-height: 1.2;
+                display: flex;
+                justify-content: center;
+                text-transform: uppercase;
+                height: 100%;
+                padding: 24px 0;
+                @include res_max($screen-sm-max){
+                    font-size: 30px;
+                }
+                &::before{
+                    content: '';
+                    background-image: url(../../assets/images/Vector_notre_charte_left.png);
+                    position: relative;
+                    width: 2%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 80px;
+                    @include res_max($screen-sm-max){
+                        width: 6%;
+                        height: 55px;
+                    }
+                }
+                &::after{
+                    content: '';
+                    background-image: url(../../assets/images/Vector_notre_charte_right.png);
+                    position: relative;
+                    width: 2%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 80px;
+                    @include res_max($screen-sm-max){
+                        width: 6%;
+                        height: 55px;
+                    }
+                }
+            }
+        }
+        .charte_left{
+            position: relative;
+            top: 50px;
+            height: 100%;
+            left: 3%;
+            .card_charte{
+                padding-bottom: 15%;
+                cursor: pointer;
+                &:hover{
+                    background-image: url(../../assets/images/HoverText_notreChorte.png);
+                    background-size: 100% 100%;
+                    background-position: -20px -20px;
+                    background-repeat: no-repeat;
+                }
+                p{
+                    font-size: 27px;
+                    font-family: "Montserrat";
+                    color: rgb(1, 37, 78);
+                    line-height: 1.2;
+                    text-align: center;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+
+        .charte_centre{
+            img{
+                height: 550px;
+                left: 15%;
+                position: relative;
+            }
+        }
+
+        .charte_right{
+            position: relative;
+            top: 50px;
+            height: 100%;
+            right: 5%;
+            .card_charte{
+                padding-bottom: 15%;
+                cursor: pointer;
+                &:hover{
+                    background-image: url(../../assets/images/HoverText_notreChorte.png);
+                    background-size: 100% 100%;
+                    background-position: -20px -20px;
+                    background-repeat: no-repeat;
+                }
+                p{
+                    font-size: 27px;
+                    font-family: "Montserrat";
+                    color: rgb(1, 37, 78);
+                    line-height: 1.2;
+                    text-align: center;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+    }
+
+    .enseignement{
+        background-image: url(../../assets/images/bg_enseignement_.png);
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: 30% 100%;
+        min-height: 550px;
+        @include res_max($screen-sm-max){
+            background-size: 100% 100%;
+        }
+        .titleEnseignement{
+            text-align: end;
+            margin: 0 2rem;
+            h2,h3{
+                font-size: 45px;
+                font-family: "Montserrat";
+                color: rgb(241, 196, 15);
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2;
+                @include res_max($screen-sm-max){
+                    color: #fff;
+                    font-size: 30px;
+                }
+            }
+            h2{
+                span{
+                    padding: 0 16% 0 10px;
+                    background-color: #2c5177;
+                    color: #fff;
+                }
+            }
+            h3{
+                span{
+                    color: #2c5177;
+                }
+            }
+        }
+        .image_enseignement{
+            img{
+                width: 100%;
+                @include res_max($screen-sm-max){
+                    width: 100%;
+                }
+            }
+        }
+        .paragraph_enseignement{
+            top: 30%;
+            position: relative;
+            @include res_max($screen-sm-max){
+                top: 0;
+                padding: 10px 0;
+            }
+            p{
+                margin: 0;
+                color: #00204d;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .cycles-div {
+        .title_cycles{
+            .title-section{
+                text-transform: capitalize;
+                font-size: 45px;
+                font-family: "Montserrat";
+                color: rgb(7, 61, 106);
+                font-weight: bold;
+                line-height: 1.2;
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                padding: 24px 0;
+                margin: 0;
+                @include res_max($screen-sm-max){
+                    font-size: 30px;
+                }
+                &::before{
+                    content: '';
+                    background-image: url(../../assets/images/Vector_notre_charte_left.png);
+                    position: relative;
+                    width: 2%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 80px;
+                    @include res_max($screen-sm-max){
+                        width: 6%;
+                        height: 55px;
+                    }
+                }
+                &::after{
+                    content: '';
+                    background-image: url(../../assets/images/Vector_notre_charte_right.png);
+                    position: relative;
+                    width: 2%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 80px;
+                    @include res_max($screen-sm-max){
+                        width: 6%;
+                        height: 55px;
+                    }
+                }
+            }
+        }
+        .card {
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+            border: 0px;
+
+            p {
+                display: none;
+            }
+
+            &:hover {
+                p {
+                    display: block;
+                }
+            }
+
+            .layer {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 45%;
+                &:hover{
+                    box-shadow: rgba(0, 0, 0, 5.35) 0 -83px 200px 50px inset;
+                    &::after{
+                        content: '';
+                        background: transparent;
+                    }
+                }
+                // background-color: rgba(0, 0, 0, 0.75);
+            }
+            .layer1{
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #0a8645;
+                    filter: brightness(0.7);
+                  }
+                
+            }
+            .layer2{
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(222 47 27);
+                    filter: brightness(0.7);
+                  }
+                  
+            }
+            .layer3 {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(10 147 239);
+                    filter: brightness(0.7);
+                  }
+                  
+            }
+            .layer4 {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(142, 68, 173, 0.72);
+                    // filter: brightness(0.7); /* Adjust the filter effect as needed */
+                  }
+            }
+            .card-img {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+              }
+          }
+          .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+            padding: 20px;
+            z-index: 2;
+            h3{
+                color: #fff;
+                font-size: 40px;
+                font-weight: 700;
+            }
+            p{
+                color: #fff;
+                font-weight: 600;
+            }
+          }
+    }
+
+    .choose-our-shcool { 
+        background-image: url(../../assets/images/bg_yellow_raison.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        .title_our_school{
+            .title-section{
+                font-size: 42px;
+                font-family: "Montserrat";
+                color: rgb(7, 61, 106);
+                font-weight: bold;
+                line-height: 1.2;
+                display: flex;
+                justify-content: center;
+                text-transform: uppercase;
+                height: 100%;
+                text-align: center;
+                padding: 24px 0;
+                @include res_max($screen-sm-max){
+                    font-size: 30px;
+                }
+                &::before{
+                    content: '';
+                    background-image: url(../../assets/images/Vector_notre_charte_left.png);
+                    position: relative;
+                    width: 2%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 90px;
+                    @include res_max($screen-sm-max){
+                        width: 6%;
+                    }
+                }
+                &::after{
+                    content: '';
+                    background-image: url(../../assets/images/Vector_notre_charte_right.png);
+                    position: relative;
+                    width: 2%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 90px;
+                    @include res_max($screen-sm-max){
+                        width: 6%;
+                    }
+                }
+            }
+        }
+        
+        .card_our_school{
+            animation: moveCircle1 10s infinite linear;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.10,1.10);
+            }
+                @keyframes moveCircle1 {
+                    0%, 50% {
+                      transform: translate3d(0, 0, 0);
+                    }
+                    50% {
+                      transform: translate3d(30px, 20px, 0); /* Adjust the movement distance */
+                    }
+                  }
+        }
+        .first , .fourth, .fifth{
+            p{
+                color: #073d6a;
+            }
+        }
+        .second, .third,.sixth {
+            p{
+                color: #fff;
+            }
+        }
+        .first, .second, .third, .fourth, .fifth, .sixth {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 7px 8px;
+            background-repeat: no-repeat;
+            background-size: 90% 100%;
+            height: 100px;
+            
+            @include res_min($screen-xxl-large-min) {
+                padding: 50px 20px;
+                height: 150px;
+            }
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                padding: 10px 4px;
+                width: 90%;
+
+            }
+            p{
+                left: 20%;
+                position: absolute;
+                font-weight: 700;
+                font-size: 17px;
+                width: 56%;
+                text-align: center;
+                @include res_min($screen-xxl-large-min) {
+                    font-size: 24px;
+                    width: 70%
+                }
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    font-size: 15px;
+                }
+            }
+            img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                left: 4%;
+                position: relative;
+                @include res_min($screen-xxl-large-min) {
+                    width: 60px;
+                    height: 60px;
+                }
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .left-side {
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                height: 100%;
+            }
+            .first {
+                background-image: url(../../assets/images/bg_raison1.png);
+                position: absolute;
+                top: 10%;
+                left: 30%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    left: 0;
+                }
+            }
+            .second {
+                background-image: url(../../assets/images/bg_raison2.png);
+                position: absolute;
+                top: 40%;
+                left: 15%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    left: 0;
+                }
+            }
+            .third {
+                background-image: url(../../assets/images/bg_raison3.png);
+                position: absolute;
+                top: 75%;
+                left: 7%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    left: 0;
+                }
+                span{
+                    font-size: 18px;
+                    font-family: 'Oswald Stencil', sans-serif;
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                    line-height: 1.2;
+                    text-align: center;
+                    left: 6%;
+                    position: relative;
+                    transform: scale(2);
+                }
+            }
+        }
+
+        .right-side {
+            position: relative;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                height: 100%;
+            }
+            .fourth {
+                background-image: url(../../assets/images/bg_raison4.png);
+                position: absolute;
+                top: 15%;
+                right: 45%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    right: 0;
+                }
+            }
+            .fifth {
+                background-image: url(../../assets/images/bg_raison5.png);
+                position: absolute;
+                top: 45%;
+                right: 12%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    right: 0;
+                }
+            }
+            .sixth {
+                background-image: url(../../assets/images/bg_raison6.png);
+                position: absolute;
+                top: 78%;
+                right: 4%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    right: 0;
+                }
+            }
+        }
+        .choose-us-img {
+            display: flex;
+            justify-content: center;
+            @include res_max($screen-sm-max){
+                top: 0;
+                position: relative;
+            }
+            .chooseUsDeskop{
+                @include res_max($screen-sm-max);@include res_max($screen-md-max) {
+                    display: block;
+                }
+            }
+            img {
+                height: 100%;
+                width: 200%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    height: 90%;
+                    object-fit: cover;
+                    width: 87%;
+                }
+            }
+        }
+    }
+
+    .vie_scolaire{
+        padding: 20px 0;
+        .title_vieScolaire{
+            background-image: url(../../assets/images/bg_title_vieScolaire.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 70px;
+            @include res_max($screen-sm-max){
+                min-height: 40px;
+            }
+            h2{
+                font-size: 65px;
+                font-family: "Montserrat";
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 0.536;
+                text-align: end;
+                transform: translateY(50%);
+                position: absolute;
+                right: 10%;
+                @include res_max($screen-sm-max){
+                    font-size: 30px;
+                }
+            }
+        }
+        .sliderone,.slidertwo{
+            .sliderVie{
+                text-align: center;
+                &:hover{
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+                img{
+                    width: 85%;
+                }
+                .text_slide{
+                    position: relative;
+                    transform: translateY(-100%);
+                    top: -100px;
+                    left: 12px;
+                    text-align: initial;
+                    p{
+                        font-size: 40px;
+                        font-family: 'Lemon/Milk', sans-serif;
+                        color: rgb(9, 49, 79);
+                        line-height: 1.2;
+                        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.38);
+                        color: #fff;
+                        text-transform: uppercase;
+                        float: left;
+                        transform: translateY(-100%);
+                        @include res_max($screen-sm-max){
+                            font-size: 20px;
+                            transform: translateY(-50%);
+                        }
+                        span{
+                            color: #00204d;
+                        }
+                    }
+                }
+            }
+        }
+        .react-multiple-carousel__arrow--left {
+            display: none;
+        }
+        .react-multiple-carousel__arrow--right {
+            display: none;
+        }
+    }
+}
+
+
+// scroll animated 
+.animate-from-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  .animate-from-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  .animate-from-bottom {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  .animate-from-top{
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  .animate-from-in{
+    opacity: 0;
+    transition: opacity 1s, transform 1.5s;
+  }
+  .animate {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  .section{
+    overflow: hidden;
+    position: relative;
+  }

@@ -1,0 +1,50 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+// mixin max
+@mixin res_max($screen){
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+$screen-sm-max : 454px;
+$screen-md-max: 768px;
+$screen-lg-max: 992px;
+$screen-xl-max: 1200px;
+$screen-xxl-max: 2000px;
+// @include res_max($screen--min) {
+// }
+
+// mixin min
+@mixin res_min($screen){
+    @media screen and (min-width: $screen){
+        @content;
+    }
+}
+$screen-xxl-large-min: 2500px;
+$screen-xxl-xlarge-min: 3000px;
+// @include res_min($screen--min) {
+// }
+
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-section{
+    font-weight: 600;
+    font-size: 35px;
+    color: #073d6a;
+    margin-bottom: 70px;
+    display: inline-block;
+    @include res_min($screen-xxl-large-min) {
+        font-size: 55px;
+    }
+    @include res_max($screen-sm-max) {
+        width: 100%;
+        font-size: 25px;
+        margin: 15px 0 10px 0;
+        font-size: 40px;
+    }
+
+}
