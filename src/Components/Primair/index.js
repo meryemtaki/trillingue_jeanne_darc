@@ -6,6 +6,7 @@ import './index.scss'
 const Primair = () =>{
     return(
         <>
+        <h1>Primair</h1>
         </>
     )
 }

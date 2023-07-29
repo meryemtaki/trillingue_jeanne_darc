@@ -6,6 +6,7 @@ const DirecteurGeneral = () => {
 
     return(
         <>
+        <h1>Mot du directeur général</h1>
         </>
     )
 }

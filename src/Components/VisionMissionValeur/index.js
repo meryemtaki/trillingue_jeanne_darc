@@ -7,6 +7,7 @@ const VisionMissionValeur = () =>{
 
     return(
         <>
+        <h1>Vision, Mission, Valeurs</h1>
         </>
     )
 }

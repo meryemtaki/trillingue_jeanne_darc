@@ -6,6 +6,7 @@ import './index.scss'
 const CollegeLycee = () =>{
     return(
         <>
+        <h1>Collège - Lycée </h1>
         </>
     )
 }

@@ -21,7 +21,7 @@ function App() {
       <Route path='/Temoignage' element={<Temoignage />} />
       <Route path='/CrecheMaternelle' element={<CrecheMaternelle />} />
       <Route path='/Primair' element={<Primair />}/>
-      <Route path='/CollegeLycee' element={<Primair />} />
+      <Route path='/CollegeLycee' element={<CollegeLycee />} />
     </Routes> 
 );  
 }

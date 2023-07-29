@@ -6,6 +6,7 @@ const NousChoisir = () =>{
 
     return(
         <>
+        <h1>Pourquoi nous choisir?</h1>
         </>
     )
 }
