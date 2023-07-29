@@ -22,9 +22,9 @@ import ImageRaison from '../../assets/images/image_raison.png'
 import SportSlider from '../../assets/images/sport_slider.png'
 import CuculturellesSlider from '../../assets/images/culturelles_slider.png'
 import ExtraSlider from '../../assets/images/extra_slider.png'
-import SocailesSlider from '../../assets/images/scolaire_slider.png'
+import SocailesSlider from '../../assets/images/activite_slider.png'
 
-import ScolairesSlider from '../../assets/images/scolaire_slider.png'
+import ScolairesSlider from '../../assets/images/sorties_slider.png'
 import VoyageSlider from '../../assets/images/voyage_slider.png'
 import SummerSlider from '../../assets/images/summer_slider.png'
 import RobotiqueSlider from '../../assets/images/robotique_slider.png'
@@ -79,9 +79,6 @@ const Accueil = () => {
             <div className='Video_bg_home'>
                 <video src={HomeVideo} type="video/mp4" width={'100%'} autoPlay={true} loop controls></video>
             </div>
-
-            
-            
             {/* Headmaster Welcome */}
 
             <div className="headmaster section">
@@ -304,7 +301,7 @@ const Accueil = () => {
                                     </div>
                                 </div>
                                 <div className='sliderVie'>
-                                    <img src={SportSlider}></img>
+                                    <img src={SocailesSlider}></img>
                                     <div className='text_slide'>
                                         <p><span>a</span>ctivités <br /> <span>s</span>ociales</p>
                                     </div>
@@ -330,7 +327,7 @@ const Accueil = () => {
                                 autoPlay={true}
                             >
                                 <div className='sliderVie'>
-                                    <img src={SummerSlider}></img>
+                                    <img src={ScolairesSlider}></img>
                                     <div className='text_slide'>
                                         <p><span>s</span>orties<br /> <span>s</span>colaires</p>
                                     </div>
