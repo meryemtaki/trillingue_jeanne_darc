@@ -38,7 +38,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 const Accueil = () => {
     const animateOnScroll = () => {
-        const elementsToAnimate = document.querySelectorAll('.animate-from-right, .animate-from-left, .animate-from-bottom, .animate-from-top, .animate-from-in');
+        const elementsToAnimate = document.querySelectorAll('.animate-from-right, .animate-from-left, .animate-from-bottom, .animate-from-top, .animate-from-in, animate-from-right-smoth, animate-from-left-smoth');
       
         elementsToAnimate.forEach(element => {
           const elementOffset = element.getBoundingClientRect().top;
@@ -77,8 +77,10 @@ const Accueil = () => {
         <div className='Home'>
 
             <div className='Video_bg_home'>
-                <video src={HomeVideo} type="video/mp4" width={'100%'} autoPlay muted></video>
+                <video src={HomeVideo} type="video/mp4" width={'100%'} autoPlay={true} loop controls></video>
             </div>
+
+            
             
             {/* Headmaster Welcome */}
 
@@ -96,7 +98,6 @@ const Accueil = () => {
                                     Fondé en 1921, notre établissement scolaire perpétue une tradition marquée par la quête de l'excellence dans tous nos projets. Nous proposons une pédagogie éducative basée sur la réussite, l'épanouissement, la responsabilisation et la confiance afin de préparer,activement,nos élèves au monde de demain.
                                     <a href='#' className='read_more'>Lire la suite</a> 
                                 </p>
-                                <a href='' className='play'><img src={Play}></img>PLAY VIDEO</a>
                         </div>
                         <div className='image col-lg-5 element animate-from-right'>
                             <img src={Headmaster} alt="" />

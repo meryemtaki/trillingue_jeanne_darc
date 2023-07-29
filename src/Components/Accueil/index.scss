@@ -29,6 +29,7 @@ $screen-xxl-max: 2000px;
         @content;
     }
 }
+$screen-xl-min: 1700px;
 $screen-xxl-large-min: 2000px;
 $screen-xxl-xlarge-min: 3000px;
 // @include res_min($screen--min) {
@@ -60,7 +61,7 @@ body{
                 }
             }
             .title-section{
-                    font-size: 33px;
+                    font-size: 50px;
                     font-family: 'Meow Script', sans-serif;
                     color: rgb(18, 53, 86);
                     line-height: 1.2;
@@ -134,12 +135,6 @@ body{
                     }
                 }
             }
-            .play{
-                color: white;
-                img{
-                    margin-right: 5px;
-                }
-            }
         }
     }
 
@@ -148,7 +143,7 @@ body{
         background-repeat: no-repeat;
         height: 100%;
         min-height: 750px;
-        background-size: 100%;
+        background-size: 100% 100%;
         @include res_max($screen-sm-max){
             background-size: 100% 100%;
         }
@@ -175,6 +170,10 @@ body{
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     height: 80px;
+                    @include res_max($screen-xl-max){
+                        width: 6%;
+                        height: 100px;
+                    }
                     @include res_max($screen-sm-max){
                         width: 6%;
                         height: 55px;
@@ -188,6 +187,10 @@ body{
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     height: 80px;
+                    @include res_max($screen-xl-max){
+                        width: 6%;
+                        height: 100px;
+                    }
                     @include res_max($screen-sm-max){
                         width: 6%;
                         height: 55px;
@@ -200,6 +203,9 @@ body{
             top: 50px;
             height: 100%;
             left: 3%;
+            @include res_max($screen-lg-max){
+                left: 0;
+            }
             .card_charte{
                 padding-bottom: 15%;
                 cursor: pointer;
@@ -222,10 +228,18 @@ body{
         }
 
         .charte_centre{
+            @include res_max($screen-lg-max){
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
             img{
                 height: 550px;
                 left: 15%;
                 position: relative;
+                @include res_max($screen-lg-max){
+                    left: 0;
+                }
             }
         }
 
@@ -234,6 +248,9 @@ body{
             top: 50px;
             height: 100%;
             right: 5%;
+            @include res_max($screen-lg-max){
+                right: 0;
+            }
             .card_charte{
                 padding-bottom: 15%;
                 cursor: pointer;
@@ -262,6 +279,7 @@ body{
         height: 100%;
         background-size: 30% 100%;
         min-height: 550px;
+        padding: 20px 0;
         @include res_max($screen-sm-max){
             background-size: 100% 100%;
         }
@@ -275,10 +293,24 @@ body{
                 font-weight: bold;
                 text-transform: uppercase;
                 line-height: 1.2;
-                @include res_max($screen-sm-max){
-                    color: #fff;
+                @include res_min(2300px){
+                    font-size: 75px;
+                }
+                @include res_max($screen-xl-max){
                     font-size: 30px;
                 }
+                @include res_max($screen-lg-max){
+                    font-size: 20px;
+                }
+                @include res_max($screen-sm-max){
+                    color: #fff;
+                    font-size: 25px;
+                }
+                @include res_max(500px){
+                    font-size: 20px;
+                }
+                
+                
             }
             h2{
                 span{
@@ -296,8 +328,8 @@ body{
         .image_enseignement{
             img{
                 width: 100%;
-                @include res_max($screen-sm-max){
-                    width: 100%;
+                @include res_max($screen-lg-max){
+                    width: 80%;
                 }
             }
         }
@@ -342,6 +374,10 @@ body{
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     height: 80px;
+                    @include res_max($screen-xl-max){
+                        width: 6%;
+                        height: 100px;
+                    }
                     @include res_max($screen-sm-max){
                         width: 6%;
                         height: 55px;
@@ -355,6 +391,10 @@ body{
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     height: 80px;
+                    @include res_max($screen-xl-max){
+                        width: 6%;
+                        height: 100px;
+                    }
                     @include res_max($screen-sm-max){
                         width: 6%;
                         height: 55px;
@@ -463,6 +503,9 @@ body{
                 color: #fff;
                 font-size: 40px;
                 font-weight: 700;
+                @include res_max($screen-xl-max) {
+                    font-size: 45px;
+                }
             }
             p{
                 color: #fff;
@@ -499,6 +542,10 @@ body{
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     height: 90px;
+                    @include res_max($screen-xl-max){
+                        width: 6%;
+                        height: 100px;
+                    }
                     @include res_max($screen-sm-max){
                         width: 6%;
                     }
@@ -511,6 +558,10 @@ body{
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     height: 90px;
+                    @include res_max($screen-xl-max){
+                        width: 6%;
+                        height: 100px;
+                    }
                     @include res_max($screen-sm-max){
                         width: 6%;
                     }
@@ -558,7 +609,7 @@ body{
             }
             @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                 padding: 10px 4px;
-                width: 90%;
+                width: 100%;
 
             }
             p{
@@ -571,6 +622,9 @@ body{
                 @include res_min($screen-xxl-large-min) {
                     font-size: 24px;
                     width: 70%
+                }
+                @include res_max($screen-xl-max) {
+                    font-size: 11px;
                 }
                 @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                     font-size: 15px;
@@ -782,28 +836,29 @@ body{
 .animate-from-right {
     opacity: 0;
     transform: translateX(100%);
-    transition: opacity 0.5s, transform 1.5s;
-  }
+    transition: opacity 0.5s, transform 2.5s;
+}
   
-  .animate-from-left {
+.animate-from-left {
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity 0.5s, transform 1.5s;
-  }
+    transition: opacity 0.5s, transform 2.5s;
+}
+
   
   .animate-from-bottom {
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 0.5s, transform 1.5s;
+    transition: opacity 0.5s, transform 2s;
   }
   .animate-from-top{
     opacity: 0;
     transform: translateY(-100%);
-    transition: opacity 0.5s, transform 1.5s;
+    transition: opacity 0.5s, transform 2s;
   }
   .animate-from-in{
     opacity: 0;
-    transition: opacity 1s, transform 1.5s;
+    transition: opacity 1s, transform 2s;
   }
   .animate {
     opacity: 1;

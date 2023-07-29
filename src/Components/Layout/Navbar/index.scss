@@ -91,31 +91,11 @@ $screen-xxl-xlarge-min: 3000px;
   display: none;
   background-color: #f7f7f7;
   padding: 15px;
-  width: 800px;
-  height: 250px;
+  width: 300px;
+  height: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  .mega-menu-left {
-    float: left;
-    margin-right: 10px;
-    width: 250px;
-    height: 100%;
-    img {
-      width: 200px;
-      height: 120px;
-      object-fit: cover;
-    }
-    .title_megamenu{
-      font-size: 18px;
-      color: #073d6a;
-      font-weight: 600;
-    }
-    p{
-      font-size: 12px;
-      font-weight: 500;
-    }
-  }
   
     a{
       &:hover{
@@ -132,16 +112,12 @@ $screen-xxl-xlarge-min: 3000px;
 .mega-menu-center {
   overflow: hidden;
   text-overflow: ellipsis;
-  width: calc(50% - 170px);
+  width: 100%;
   float: left;
   height: 100%;
 }
 
-.mega-menu-right {
-  float: right;
-  width: calc(50% - 105px);
-  height: 100%;
-}
+
 .mega-menu {
   a {
     display: block;
@@ -346,20 +322,7 @@ $screen-xxl-xlarge-min: 3000px;
     padding: 10px;
   }
 
-  .mega-menu-left {
-    display: none;
-    float: none;
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .mega-menu-left img {
-    width: 100%;
-    height: auto;
-  }
-
-  .mega-menu-center,
-  .mega-menu-right {
+  .mega-menu-center{
     width: 100%;
     float: none;
   }

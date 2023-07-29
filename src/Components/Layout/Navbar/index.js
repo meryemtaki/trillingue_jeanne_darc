@@ -2,7 +2,9 @@ import logo from '../../../assets/images/Logo.png'
 import open_respo from '../../../assets/images/burger-bar.png'
 import close_respo from '../../../assets/images/fermer.png'
 import React, { useState, useEffect  } from 'react';
+import DirecteurGeneral from '../../DirecteurGeneral';
 import './index.scss';
+import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,7 +84,8 @@ const Navbar = () => {
       <a href='#'><img src={logo} alt='logo'></img></a>
       </div>
       <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
-        <li className="navbar-menu-item"><a href='#' className='navbar_link'>Accueil</a>
+        <li className="navbar-menu-item">
+          <NavLink exact='true' to='/' className='navbar_link'>Accueil</NavLink>
         </li>
         <li className="navbar-menu-item">
           <div className='fle'>
@@ -92,23 +95,16 @@ const Navbar = () => {
             </div>
           </div>
           <div className={`mega-menu megamenu1 ${megamenu1Open ? 'show' : ''}`}>
-            <div className="mega-menu-left">
-              <img src={logo} alt="Image 1" />
-              <h3 className='title_megamenu'>Lorem</h3>
-              <p>Some description here description <br/> description description description<br/> description here.</p>
-            </div>
             <div className="mega-menu-center">
-              <a href="#">Lorem</a>
+              <NavLink exact='true' to='/DireacteurGeneral'>Mot du directeur général</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Lorem</a>
+              <NavLink exact='true' to='/Apropos'>À propos</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Lorem</a>
+              <NavLink exact='true' to='/NousChoisir' >Pourquoi nous choisir?</NavLink>
               <hr className='line_megamenu'/>
-            </div>
-            <div className="mega-menu-right">
-              <a href="#">Vision, Mission & values</a>
+              <NavLink exact='true' to='/VisionMissionValeur' >Vision, Mission, Valeurs</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Testimonials</a>
+              <NavLink exact='true' to='/Temoignage' >Témoignage</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -121,25 +117,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className={`mega-menu megamenu2 ${megamenu2Open ? 'show' : ''}`}>
-            <div className="mega-menu-left">
-              <img src={logo} alt="Image 1" />
-              <h3 className='title_megamenu'>Lorem</h3>
-              <p>Some description here description <br/> description description description<br/> description here.</p>
-            </div>
             <div className="mega-menu-center">
-              <a href="#">Our Curriculum</a>
+              <NavLink exact='true' to='/CrecheMaternelle' >Crèche - Maternelle</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Amazing Learning</a>
+              <NavLink exact='true' to='/Primair'>Primair</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Foundation Stages</a>
-              <hr className='line_megamenu'/>
-            </div>
-            <div className="mega-menu-right">
-              <a href="#">Primary School</a>
-              <hr className='line_megamenu'/>
-              <a href="#">Secondary School</a>
-              <hr className='line_megamenu'/>
-              <a href="#">Inclusion & Learning support</a>
+              <NavLink exact='true' to='/CollegeLycee'>Collège - Lycée</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -152,20 +135,10 @@ const Navbar = () => {
             </div>
           </div>
           <div className={`mega-menu megamenu3 ${megamenu3Open ? 'show' : ''}`}>
-            <div className="mega-menu-left">
-              <img src={logo} alt="Image 1" />
-              <h3 className='title_megamenu'>Lorem</h3>
-              <p>Some description here description <br/> description description description<br/> description here.</p>
-            </div>
             <div className="mega-menu-center">
-              <a href="#">Admissions Process</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Admissions Policy</a>
-              <hr className='line_megamenu'/>
-              
-            </div>
-            <div className="mega-menu-right">
-              <a href="#">Enquire Now</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -178,23 +151,12 @@ const Navbar = () => {
             </div>
             </div>
           <div className={`mega-menu megamenu4 ${megamenu4Open ? 'show' : ''}`}>
-            <div className="mega-menu-left">
-              <img src={logo} alt="Image 1" />
-              <h3 className='title_megamenu'>Lorem</h3>
-              <p>Some description here description <br/> description description description<br/> description here.</p>
-            </div>
             <div className="mega-menu-center">
-              <a href="#">School Day</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Extra curricular Activitiess</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Uniform</a>
-              <hr className='line_megamenu'/>
-            </div>
-            <div className="mega-menu-right">
-              <a href="#">Transport</a>
-              <hr className='line_megamenu'/>
-              <a href="#">School Policiess</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -207,18 +169,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className={`mega-menu megamenu5 ${megamenu5Open ? 'show' : ''}`}>
-            <div className="mega-menu-left">
-              <img src={logo} alt="Image 1" />
-              <h3 className='title_megamenu'>Lorem</h3>
-              <p>Some description here description <br/> description description description<br/> description here.</p>
-            </div>
             <div className="mega-menu-center">
-              <a href="#">School News</a>
-              <hr className='line_megamenu'/>
-              
-            </div>
-            <div className="mega-menu-right">
-            <a href="#">Upcoming Events</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -231,21 +183,11 @@ const Navbar = () => {
             </div>
           </div>
           <div className={`mega-menu megamenu6 ${megamenu6Open ? 'show' : ''}`}>
-            <div className="mega-menu-left">
-              <img src={logo} alt="Image 1" />
-              <h3 className='title_megamenu'>Lorem</h3>
-              <p>Some description here description <br/> description description description<br/> description here.</p>
-            </div>
             <div className="mega-menu-center">
-              <a href="#">Administration</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Enrollement</a>
+              <NavLink exact='true' to=''>Lorem</NavLink>
               <hr className='line_megamenu'/>
-              
-            </div>
-            <div className="mega-menu-right">
-            <a href="#">Working with us</a>
-              <hr className='line_megamenu'/> 
             </div>
           </div>
         </li>
